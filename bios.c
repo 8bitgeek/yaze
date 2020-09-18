@@ -37,11 +37,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. */
 
 /* 	$Id: bios.c,v 1.4 2004/04/23 09:50:15 fdc Exp $	 */
 
-#ifndef lint
-static char vcid[] = "$Id: bios.c,v 1.4 2004/04/23 09:50:15 fdc Exp $";
-#endif /* lint */
-
-
 /* Z80 registers */
 #define AF	af[af_sel]
 #define BC	regs[regs_sel].bc

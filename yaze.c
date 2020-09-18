@@ -24,11 +24,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. */
 
 /* 	$Id: yaze.c,v 1.5 2004/04/23 10:05:25 fdc Exp $	 */
 
-#ifndef lint
-static char vcid[] = "$Id: yaze.c,v 1.5 2004/04/23 10:05:25 fdc Exp $";
-#endif /* lint */
-
-
 #define VERSION	"1.14"
 
 /* Z80 registers */

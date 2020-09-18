@@ -41,7 +41,7 @@ INSTALL	      = install
 
 ###### you should not need to change anything below this line ######
 CWARN	      = -ansi -pedantic -Wall -Wshadow \
-		-Wpointer-arith -Wnested-externs -Winline
+		-Wpointer-arith -Wnested-externs -Winline -Wno-unused-result -Wno-maybe-uninitialized
 CFLAGS        =	$(CWARN) $(OPTIMIZE) $(OPTIONS) -DLIBDIR=\"$(LIBDIR)/\"
 
 SRCS	      = yaze.c simz80.c io.c bios.c monitor.c cdm.c
@@ -76,24 +76,6 @@ install:	all
 		$(INSTALL) -c -m 644 cdm.1 $(MANDIR)
 
 tar:		$(DISTRIB)
-		(rm -rf yaze-$(VERSION); \
-		mkdir yaze-$(VERSION); \
-		cd yaze-$(VERSION); \
-		for f in Makefile simz80.h yaze.h bios.h simz80.pl \
-			    .yazerc yaze.boot host2cpm.tcl $(SRCS) $(DOC); \
-			do ln ../$$f .; done; \
-		mkdir test; \
-		for f in $(TEST_SRC); \
-			do if test -z `tr -dc '\r' <../$$f`; \
-				then sed 's/$$//' <../$$f >$$f; \
-				else ln ../$$f $$f; fi; \
-		done; \
-		for f in test/zexlax.pl $(TEST_BIN); \
-			do ln ../$$f $$f; done; \
-		cd ..; \
-		tar cf yaze-$(VERSION).tar yaze-$(VERSION); \
-		gzip -9 yaze-$(VERSION).tar; \
-		rm -rf yaze-$(VERSION))
 
 clean:;		rm -f *.o *~ core
 

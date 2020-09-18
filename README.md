@@ -1,8 +1,3 @@
-This is a fork of the original [yaze 1.14][yaze]. There are no changes
-or fixes here. It was place here to make easy to browse. Also this
-emulator has a very useful test suite comparing the results against
-a real chip.
-
 [yaze]: ftp://ftp.ping.de/pub/misc/emulators/
 
 Yet Another Z80 Emulator
@@ -50,4 +45,4 @@ Frank Cringle, October 1995
 fdc@cliwe.ping.de
 
 
-Various trademarks are the property of various organisations.
+Various trademarks are the property of various organizations.

@@ -674,7 +674,7 @@ simz80(FASTREG PC)
     FASTREG HL = regs[regs_sel].hl;
     FASTREG SP = sp;
     FASTWORK temp, acu, sum, cbits;
-    FASTWORK op, adr;
+    FASTWORK op; /* , adr; */
 
 #ifdef DEBUG
     while (!stopsim) {

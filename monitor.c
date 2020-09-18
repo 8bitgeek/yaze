@@ -19,10 +19,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. */
 
 /* 	$Id: monitor.c,v 1.3 2004/01/11 16:49:58 fdc Exp $	 */
 
-#ifndef lint
-static char vcid[] = "$Id: monitor.c,v 1.3 2004/01/11 16:49:58 fdc Exp $";
-#endif /* lint */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -44,6 +40,8 @@ static char vcid[] = "$Id: monitor.c,v 1.3 2004/01/11 16:49:58 fdc Exp $";
 #include "simz80.h"
 #include "yaze.h"
 #include "bios.h"
+
+extern char *perl_params;
 
 /* TTY management */
 
@@ -916,7 +914,6 @@ dotime(char *cmd)
     static struct tms lastbuf;
     struct tms tbuf;
     long tickspersec = CLK_TCK;
-    extern char *perl_params;
 
     now = times(&tbuf);
 
